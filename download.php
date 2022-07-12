@@ -8,7 +8,8 @@ fclose($clean);
 $id = $_GET['gd'];
  
  function udud($id){
-		$ch = curl_init("https://drive.google.com/uc?id=$id&authuser=0&export=download");
+		$ch = curl_init("https://www.googleapis.com/drive/v3/files/$id?alt=media&key=AIzaSyD3j5e_n24B-JPkAd5AIMK-QyrsgmGIk90");
+	 /*https://www.googleapis.com/drive/v3/files/10we1Fn13Zzm1L0HkCkW8-Dow8yWOFtX7?alt=media&key=AIzaSyD3j5e_n24B-JPkAd5AIMK-QyrsgmGIk90*/
 		curl_setopt_array($ch, array(
 			CURLOPT_CUSTOMREQUEST => 'POST',
 			CURLOPT_SSL_VERIFYPEER => false,
