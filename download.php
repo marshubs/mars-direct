@@ -8,7 +8,7 @@ fclose($clean);
 $id = $_GET['gd'];
  
  function udud($id){
-		$ch = curl_init("https://drive.google.com/uc?id=$id&authuser=0&export=download");
+		$ch = curl_init("https://drive.google.com/u/0/uc?export=download&confirm=SEXC&id=$id");
 		curl_setopt_array($ch, array(
 			CURLOPT_CUSTOMREQUEST => 'POST',
 			CURLOPT_SSL_VERIFYPEER => false,
