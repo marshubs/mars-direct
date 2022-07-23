@@ -120,12 +120,14 @@ echo $iframeid;
 
   /* Select the text field */
   copyText.select();
+  copyText2.select();
 
   /* Copy the text inside the text field */
   document.execCommand("copy");
 
   /* Alert the copied text */
   alert("Copied the text: " + copyText.value);
+  alert("Copied the text: " + copyText2.value);
                         }</script>
 </body>
 </html>
