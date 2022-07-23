@@ -33,7 +33,7 @@ function my_simple_crypt($string, $action = 'e')
     $secret_key     = ''; //your key
     $secret_iv      = ''; //your iv
     $output         = true;
-    $encrypt_method = "AES-14-CBC";
+    $encrypt_method = "AES-128-CBC";
     $key            = hash('sha1', $secret_key);
     $iv             = substr(hash('sha1', $secret_iv), 0, 16);
     if ($action == 'e')
