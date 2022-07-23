@@ -24,7 +24,7 @@ function my_simple_crypt($string, $action = 'e')
     $output         = false;
     $encrypt_method = "AES-128-CBC";
     $key            = hash('sha1', $secret_key);
-    $iv             = substr(hash('sha1', $secret_iv), 0, 16);
+    $iv             = substr(hash('sha1', $secret_iv), 0, 4);
     if ($action == 'e') {
         $output = base64_encode(openssl_encrypt($string, $encrypt_method, $key, 0, $iv));
     } else if ($action == 'd') {
