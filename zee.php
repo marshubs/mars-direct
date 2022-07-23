@@ -81,7 +81,8 @@ if ($iframeid) {
             <h5 class="card-header">Hasil Link Anda</h5>
             <div class="card-body">
                 <h6 class="text-muted">Silahkan Copy Link Anda.</h6>
-<textarea class="form-control" rows="6" readonly>
+<textarea class="form-control" rows="6" readonly id="myInput">
+    <button onclick="copyText()">Copy text</button>
 <?php
 if ($iframeid) {
     echo 'https://' . $_SERVER['SERVER_NAME'] . '/dl/' . $iframeid . '</textarea>';
@@ -103,5 +104,19 @@ if ($iframeid) {
   <section class="footme">
       Google Drive Direct Link Generator <a id="nochange" href="https://fb.me/composer.json">Iqbal Rifai</a>
   </section>
+                    <script>
+                        function copyText() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+                        }</script>
 </body>
 </html>
