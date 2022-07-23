@@ -80,20 +80,15 @@ if ($iframeid) {
         <div class='card' style='margin:40px;'>
             <h5 class="card-header">Hasil Link Anda</h5>
             <div class="card-body">
-                <h6 class="text-muted">Silahkan Copy Link Anda.<button onclick="copyd()">Copy text</button></h6>
-                
-<textarea class="form-control" rows="6" readonly id="myInput">
+                <h6 class="text-muted">Silahkan Copy Link Anda.</h6>
+<textarea class="form-control" rows="6" readonly>
 <?php
 if ($iframeid) {
-echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid . '</textarea>';
-?>
-    
-
-</textarea><br/>
-<center>
-<h2>Boleh di test link downloadnya dibawah</h2>
-
-<a href="<?php
+    echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid . '</textarea>';
+?></textarea><br/>
+        <center>
+        <h2>Boleh di test link downloadnya dibawah</h2>
+        <a href="<?php
     echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid;
 ?>"><button class="btn btn-default">Download</button></a></center>
         <?php
@@ -102,44 +97,11 @@ echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid . '</textarea>';
 </textarea>
 </div>
     </div>
-<div class='container-fluid' style="max-width: 1080px !important;">
-<div class='row'>
-    <textarea class="form-control" rows="6" readonly id="textcopy">
-<?php
-$iframeid;
-?>
-    
-<button onclick="copy()">Copy text</button>
-</textarea>
-    <div></div>
 
 
         <br><br>
   <section class="footme">
       Google Drive Direct Link Generator <a id="nochange" href="https://fb.me/composer.json">Iqbal Rifai</a>
   </section>
-                    <script>
-                        function copy() {
-  let textarea = document.getElementById("textcopy");
-  textarea.select();
-  document.execCommand("copy");
-}
-                        function copyText() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
-  var copyText2 = document.getElementById("myInput2");                          
-
-  /* Select the text field */
-  copyText.select();
-  copyText2.select();
-
-  /* Copy the text inside the text field */
-  document.execCommand("myInput");
-  document.execCommand("myInput2");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-  alert("Copied the text: " + copyText2.value);
-                        }</script>
 </body>
 </html>
