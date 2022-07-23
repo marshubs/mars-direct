@@ -80,9 +80,8 @@ if ($iframeid) {
         <div class='card' style='margin:40px;'>
             <h5 class="card-header">Hasil Link Anda</h5>
             <div class="card-body">
-                <h6 class="text-muted">Silahkan Copy Link Anda.</h6>
+                <h6 class="text-muted">Silahkan Copy Link Anda.<button onclick="copyText()">Copy text</button></h6>
 <textarea class="form-control" rows="6" readonly id="myInput">
-    <button onclick="copyText()">Copy text</button>
 <?php
 if ($iframeid) {
     echo 'https://' . $_SERVER['SERVER_NAME'] . '/dl/' . $iframeid . '</textarea>';
