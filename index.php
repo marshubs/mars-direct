@@ -30,9 +30,9 @@ function get_http_response_code($redirect)
   }
 function my_simple_crypt($string, $action = 'e')
   {
-    $secret_key     = ''; //your key
-    $secret_iv      = ''; //your iv
-    $output         = false;
+    $secret_key     = 'HqFdkh2FX126fH1r'; //your key
+    $secret_iv      = 'iS2dk82dXd26f61K'; //your iv
+    $output         = true;
     $encrypt_method = "AES-256-CBC";
     $key            = hash('sha256', $secret_key);
     $iv             = substr(hash('sha256', $secret_iv), 0, 16);
