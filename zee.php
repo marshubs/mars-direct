@@ -84,12 +84,12 @@ if ($iframeid) {
 <textarea class="form-control" rows="6" readonly id="myInput">
 <?php
 if ($iframeid) {
-    echo 'https://' . $_SERVER['SERVER_NAME'] . '/dl/' . $iframeid . '</textarea>';
+    echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid . '</textarea>';
 ?>
 <textarea class="form-control" rows="6" readonly id="myInput">
 <?php
 if ($iframeid) {
-    echo $iframeid . '</textarea>';
+    echo $iframeid;
 ?>
                 
                 </textarea>
@@ -97,7 +97,7 @@ if ($iframeid) {
         <center>
         <h2>Boleh di test link downloadnya dibawah</h2>
         <a href="<?php
-    echo 'https://' . $_SERVER['SERVER_NAME'] . '/dl/' . $iframeid;
+    echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid;
 ?>"><button class="btn btn-default">Download</button></a></center>
         <?php
 }
