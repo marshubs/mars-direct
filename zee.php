@@ -85,7 +85,15 @@ if ($iframeid) {
 <?php
 if ($iframeid) {
     echo 'https://' . $_SERVER['SERVER_NAME'] . '/dl/' . $iframeid . '</textarea>';
-?></textarea><br/>
+?>
+<textarea class="form-control" rows="6" readonly id="myInput">
+<?php
+if ($iframeid) {
+    echo $iframeid . '</textarea>';
+?>
+                
+                </textarea>
+                </textarea><br/>
         <center>
         <h2>Boleh di test link downloadnya dibawah</h2>
         <a href="<?php
