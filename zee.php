@@ -86,9 +86,8 @@ if ($iframeid) {
 if ($iframeid) {
     echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid . '</textarea>';
 ?>
-<textarea class="form-control" rows="6" readonly id="myInput">
+<textarea class="form-control" rows="6" readonly id="myInput2">
 <?php
-if ($iframeid) {
     echo $iframeid;
 ?>
                 
@@ -115,6 +114,7 @@ if ($iframeid) {
                         function copyText() {
   /* Get the text field */
   var copyText = document.getElementById("myInput");
+  var copyText = document.getElementById("myInput2");                          
 
   /* Select the text field */
   copyText.select();
