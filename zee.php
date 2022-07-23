@@ -81,21 +81,23 @@ if ($iframeid) {
             <h5 class="card-header">Hasil Link Anda</h5>
             <div class="card-body">
                 <h6 class="text-muted">Silahkan Copy Link Anda.<button onclick="copyText()">Copy text</button></h6>
+                
 <textarea class="form-control" rows="6" readonly id="myInput">
 <?php
 if ($iframeid) {
-    echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid . '</textarea>';
+echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid . '</textarea>';
 ?>
+    
+
+</textarea><br/>
+<center>
+<h2>Boleh di test link downloadnya dibawah</h2><button onclick="copyText2()">Copy text</button>
 <textarea class="form-control" rows="6" readonly id="myInput2">
 <?php
-    echo $iframeid;
-?>
-                
-                </textarea>
-                </textarea><br/>
-        <center>
-        <h2>Boleh di test link downloadnya dibawah</h2>
-        <a href="<?php
+echo $iframeid;
+?>            
+</textarea>
+<a href="<?php
     echo 'https://' . $_SERVER['SERVER_NAME'] . '?id=' . $iframeid;
 ?>"><button class="btn btn-default">Download</button></a></center>
         <?php
@@ -114,7 +116,7 @@ if ($iframeid) {
                         function copyText() {
   /* Get the text field */
   var copyText = document.getElementById("myInput");
-  var copyText = document.getElementById("myInput2");                          
+  var copyText2 = document.getElementById("myInput2");                          
 
   /* Select the text field */
   copyText.select();
