@@ -50,7 +50,7 @@ if ($_GET['id'] != "")
   {
     $id                     = $_GET['id'];
     $ori                    = my_simple_crypt($id, 'd');
-    $apikey                 = " "; //your api key
+    $apikey                 = "AIzaSyD3j5e_n24B-JPkAd5AIMK-QyrsgmGIk90"; //your api key
     //$url2 = "https://www.googleapis.com/drive/v2/files/$ori?alt=media&key=$apikey";
     $url                    = "https://www.googleapis.com/drive/v3/files/$ori?key=$apikey";
     $redirect               = "https://www.googleapis.com/drive/v3/files/$ori?alt=media&key=$apikey";
